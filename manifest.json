@@ -1,6 +1,6 @@
 {
-	"id": "Cooklang block",
-	"name": "obsidian-cooklang-block",
+	"id": "cooklang-codeblock",
+	"name": "Cooklang Codeblock",
 	"version": "0.1.0",
 	"minAppVersion": "1.12.7",
 	"description": "Render recipes using cooklang formatted codeblocks.",
