@@ -25,10 +25,6 @@
 	gap: var(--size-4-1) var(--size-4-3);
 }
 
-.cooklang-meta-item {
-	display: contents;
-}
-
 .cooklang-meta-key {
 	font-weight: var(--font-semibold);
 	color: var(--text-muted);
