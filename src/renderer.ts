@@ -53,9 +53,8 @@ function renderMetadata(parent: HTMLElement, metadata: Metadata): void {
 	const list = section.createEl("dl", { cls: "cooklang-meta-list" });
 	for (const key of keys) {
 		if (key.toLowerCase() === "title") continue;
-		const item = list.createDiv({ cls: "cooklang-meta-item" });
-		item.createEl("dt", { cls: "cooklang-meta-key", text: key });
-		item.createEl("dd", {
+		list.createEl("dt", { cls: "cooklang-meta-key", text: key });
+		list.createEl("dd", {
 			cls: "cooklang-meta-value",
 			text: metadata[key],
 		});
