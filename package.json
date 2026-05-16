@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-cooklang-block-plugin",
-	"version": "0.1.0",
+	"version": "0.1.2",
 	"description": "Render recipes using cooklang formatted codeblocks.",
 	"main": "main.js",
 	"type": "module",
