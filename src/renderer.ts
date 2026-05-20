@@ -28,16 +28,17 @@ export function renderCooklangBlock(
 	const recipe = result.recipe;
 	const container = el.createDiv({ cls: "cooklang-recipe" });
 
-	renderMetadata(container, recipe.metadata);
-	container.createEl("hr");
+	if (renderMetadata(container, recipe.metadata)) {
+		container.createEl("hr");
+	}
 	renderIngredients(container, recipe.ingredients);
 	renderCookware(container, recipe.cookwares);
 	renderSteps(container, recipe.steps);
 }
 
-function renderMetadata(parent: HTMLElement, metadata: Metadata): void {
+function renderMetadata(parent: HTMLElement, metadata: Metadata): boolean {
 	const keys = Object.keys(metadata);
-	if (keys.length === 0) return;
+	if (keys.length === 0) return false;
 
 	const section = parent.createDiv({ cls: "cooklang-metadata" });
 
@@ -59,6 +60,7 @@ function renderMetadata(parent: HTMLElement, metadata: Metadata): void {
 			text: metadata[key],
 		});
 	}
+	return true;
 }
 
 function renderIngredients(
